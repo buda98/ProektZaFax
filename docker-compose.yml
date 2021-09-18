@@ -1,0 +1,29 @@
+version: '2'
+services:
+    backend:
+        container_name: test_backend
+        build:
+            context: backend
+        image: test_backend:latest
+        depends_on:
+            - db
+
+    frontend:
+        container_name: test_frontend
+        build:
+            context: frontend
+        image: test_frontend:latest
+        depends_on:
+            - backend
+        ports:
+            - 8080:80
+
+    db:
+        container_name: test_db
+        image: postgres
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=backend
+            - POSTGRES_PASSWORD=backend
+            - POSTGRES_DB=proekt

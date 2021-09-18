@@ -42,7 +42,7 @@ db.sync();
 
 
 
-db.authenticate().then(()=>{console.log("DB connected")}).catch(()=>{console.log("Error: " +err)})
+db.authenticate().then(()=>{console.log("DB connected")}).catch((err)=>{console.log("Error: " +err)})
 
 app.use(fileUpload({
     limits: { fileSize: 500 * 1024 * 1024 },
