@@ -3,7 +3,7 @@ const app = express();
 const broilo = require("../controllers/broiloController.js")
 const auth = require("../controllers/authController.js")
 
-//192.168.0.29:5000/broilo/*
+//172.21.0.3:5000/broilo/*
 //TODO: authentication
 
 app.post("/getBroilos",auth.authMiddleware,broilo.getBroilos)

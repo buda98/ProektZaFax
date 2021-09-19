@@ -3,7 +3,7 @@ const app = express();
 const user = require("../controllers/usersController.js")
 const auth = require("../controllers/authController.js")
 
-//192.168.0.29:5000/user/*
+//172.21.0.3:5000/user/*
 
 
 //TODO: authentication

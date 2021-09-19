@@ -3,7 +3,7 @@ const app = express();
 const auth = require("../controllers/authController.js")
 
 
-//192.168.0.29:5000/auth/*
+//172.21.0.3:5000/auth/*
 app.post("/changePassword",auth.authMiddleware,auth.changePassword)
 app.post("/register",auth.register);
 app.post("/login",auth.login)

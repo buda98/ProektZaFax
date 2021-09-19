@@ -33,7 +33,7 @@ function PatchedPagination(props) {
 
 
 
-axios.defaults.baseURL = 'http://192.168.0.29:5000';
+axios.defaults.baseURL = 'http://172.21.0.3:5000';
 
 class UploadStornoData extends Component {
     constructor(props){
