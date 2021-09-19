@@ -3,7 +3,7 @@ const app = express();
 const firma = require("../controllers/firmaController.js")
 const auth = require("../controllers/authController.js")
 
-//172.22.0.3:5000/firmi/*
+//192.168.0.29:5000/firmi/*
 
 //TODO: authentication
 app.post("/dodadiFirma",auth.authMiddleware,firma.dodadiFirma)

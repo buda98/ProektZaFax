@@ -1,0 +1,28 @@
+- hosts: "Servers"
+  become: yes
+  become_method: sudo
+  tasks:
+    - vars:
+      USER: "darko"
+  
+  tasks:
+  - name: Update apt packages 
+    apt:
+      update_cache: "yes"
+      force_apt_get: "yes"
+      
+  - name: Add Docker GPG apt key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+      
+  - name: Add Docker Repository
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu bionic stable
+      state: present
+      update_cache: "yes"
+
+  - name: Git pull
+    ansible.builtin.git:
+      repo: 'https://github.com/buda98/ProektZaFax.git'
+      dest: /home/darko/proektZaFax

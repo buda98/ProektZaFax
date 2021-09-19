@@ -7,7 +7,7 @@ import FirmiTable from "./wizard/FirmiTable"
 import UsersTable from "./wizard/UsersTable"
 import ZelenaEnergijaData from "./wizard/ZelenaEnergijaData"
 import MerniTockiTable from "./wizard/MerniTockiTable"
-axios.defaults.baseURL = 'http://172.22.0.3:5000';
+axios.defaults.baseURL = 'http://192.168.0.29:5000';
 export default class Login extends Component {
     
         render(){

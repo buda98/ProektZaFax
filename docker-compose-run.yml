@@ -1,0 +1,9 @@
+- hosts: "Servers"
+  become: yes
+  become_method: sudo
+  tasks: 
+  - name: Deploy Docker Compose stack
+    docker_compose:
+      project_src: /home/darko/proektZaFax
+      files:
+      - docker-compose.yml

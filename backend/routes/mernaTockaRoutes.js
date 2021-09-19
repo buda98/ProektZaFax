@@ -3,7 +3,7 @@ const app = express();
 const mernaTocka = require("../controllers/mernaTockaController.js")
 const auth = require("../controllers/authController.js")
 
-//172.22.0.3:5000/mernaTocka/*
+//192.168.0.29:5000/mernaTocka/*
 
 //TODO: remove route - will be used internally. currently added for testing
 app.post("/dodadiMernaTocka", auth.authMiddleware, mernaTocka.dodadiMernaTocka)
