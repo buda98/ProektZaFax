@@ -21,7 +21,7 @@ import './App.css';
 
 import axios from 'axios';
 import ZelenaEnergijaData from './components/wizard/ZelenaEnergijaData';
-axios.defaults.baseURL = 'http://172.21.0.3:5000';
+axios.defaults.baseURL = 'http://172.23.0.3:5000';
 
 export default function App () {
       const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem("isAuthenticated")));
