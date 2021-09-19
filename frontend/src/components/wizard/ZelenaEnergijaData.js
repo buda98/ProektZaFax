@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-axios.defaults.baseUrl = 'http://localhost:5000';
+axios.defaults.baseURL = 'http://172.22.0.3:5000';
 
 const useStyles = makeStyles((theme) => ({
   root: {

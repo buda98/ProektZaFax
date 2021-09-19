@@ -3,7 +3,7 @@ const app = express();
 const user = require("../controllers/usersController.js")
 const auth = require("../controllers/authController.js")
 
-// localhost:5000/user/*
+//172.22.0.3:5000/user/*
 
 
 //TODO: authentication

@@ -3,7 +3,7 @@ const app = express();
 const storno = require("../controllers/stornoController.js")
 const auth = require("../controllers/authController.js")
 
-// localhost:5000/broilo/*
+//172.22.0.3:5000/broilo/*
 //TODO: authentication
 app.post("/uploadStornoFile", auth.authMiddleware, storno.uploadStornoFile)
 app.post("/getStornos", auth.authMiddleware, storno.getStornos)

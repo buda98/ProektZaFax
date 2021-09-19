@@ -1,12 +1,18 @@
 version: '2'
 services:
     backend:
-        container_name: test_backend
+        container_name: 172.22.0.3
         build:
             context: backend
-        image: test_backend:latest
+        image: 172.22.0.3:latest
         depends_on:
             - db
+        ports:
+            - "5030:5000"
+        networks:
+            default:
+                aliases:
+                    - back-end
 
     frontend:
         container_name: test_frontend
@@ -16,13 +22,17 @@ services:
         depends_on:
             - backend
         ports:
-            - 8080:80
+            - "8080:80"
+        networks:
+            default:
+                aliases:
+                    - front-end
 
     db:
         container_name: test_db
         image: postgres
         ports:
-            - 5432:5432
+            - "5432:5432"
         environment:
             - POSTGRES_USER=backend
             - POSTGRES_PASSWORD=backend

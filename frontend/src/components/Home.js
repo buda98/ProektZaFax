@@ -1,7 +1,7 @@
 
 import React from 'react';
 import axios from 'axios';
-axios.defaults.baseUrl = 'http://localhost:5000';
+axios.defaults.baseURL = 'http://172.22.0.3:5000';
 export default class Home extends React.Component {
 
 

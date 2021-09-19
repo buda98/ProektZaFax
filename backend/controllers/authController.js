@@ -44,9 +44,8 @@ const whoAmI = async function (req, res){
 }
 
 const changePassword = async function(req,res){
- 
     const username=req.session.username;
-    const password=req.body.password;
+    const password=await bcrypt.hash(req.body.password,null,null,10);
     const newPassword=req.body.newPassword;
    
     const hashed = await bcrypt.hash(newPassword,10);
@@ -73,7 +72,7 @@ const changePassword = async function(req,res){
 const register = async function(req,res){
 
     const username = req.body.username;
-    const password =await bcrypt.hash(req.body.password,10);
+    const password = await bcrypt.hash(req.body.password,10);
     const ime = req.body.ime;
     const prezime = req.body.prezime;
     const isAdmin = req.body.isAdmin;
